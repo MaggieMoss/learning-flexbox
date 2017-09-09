@@ -1,0 +1,70 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 5%;
+  text-transform: uppercase;
+}
+
+h1 {
+  text-align: center;
+}
+
+nav ul, .value-options {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.value-options {
+  font-size: 15px;
+  justify-content: flex-start;
+}
+
+.value-options li, nav ul li {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.code-samples {
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  text-transform: none;
+}
+
+.parent {
+  display: flex;
+  border: 1px solid blue;
+  border-radius: 3px;
+  padding: 20px;
+  min-height: 300px;
+}
+
+.parent div {
+  background-color: indianred;
+  margin: 10px;
+  padding: 20px;
+  height: 30px;
+}
+
+.description {
+  text-align: center;
+  text-transform: none;
+}
+
+.selected {
+  text-decoration: underline;
+}
+
+/* Extra Classes */
+
+.parent div.wide {
+  width: 300px;
+}
+
+div.vary-font-sizes:nth-child(even) {
+  font-size: 30px;
+}
+
+.wrapped {
+  flex-wrap: wrap;
+}
