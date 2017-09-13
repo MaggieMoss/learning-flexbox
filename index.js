@@ -14,7 +14,7 @@ var properties = {
     options: ['no wrap', 'wrap', 'wrap-reverse'],
     child_class: 'wide'
   },
-  'justify-content': {
+  'justify-content  ': {
     description: 'Defines alignment along the main access',
     options: ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']
   },
@@ -91,6 +91,18 @@ function updateCodeSnippet() {
   text += '&nbsp; &nbsp; ' +setProperty + ': ' + setValue + ';'
   text += '\n}'
   $('.code-samples code').html(text);
+//   $.getScript( "./pre.js", function( data, textStatus, jqxhr ) {
+//   console.log( data ); // Data returned
+//   console.log( textStatus ); // Success
+//   console.log( jqxhr.status ); // 200
+//   console.log( "Load was performed." );
+// });
+  (function(document, tag) {
+      var scriptTag = document.createElement(tag), // create a script tag
+          prismEle = document.getElementsByClassName('prismz')[0];
+      scriptTag.src = './pre.js'; // set the source of the script to your script
+      prismEle.parentNode.insertBefore(scriptTag, prismEle); // append the script to the DOM
+  }(document, 'script'));
 }
 
 function updateDescription(description) {
